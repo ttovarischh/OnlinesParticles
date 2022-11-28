@@ -1,0 +1,29 @@
+<div class="SectionWrapper">
+    <div class="FaqFlexBox">
+    <% items.each do |faq| %>
+        <div class="FaqItem">
+        <p class="SubTitle"><%= faq["question"] %></p>
+        <div class="PlusIconWrapper">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="17.96" y1="35.0211" x2="17.96" y2="0.978565" stroke-width="1.5" stroke="black"/>
+            <line x1="0.978516" y1="17.9602" x2="35.0211" y2="17.9602" stroke-width="1.5" stroke="black"/>
+            </svg>
+        </div>
+        <div class="Modal">
+            <div class="ModalContent">
+            <div class="ModalInfo">
+                <p class="Header"><%= faq["question"] %></p>
+                <p class="MainText"><%= faq["answer"] %></p>
+            </div>
+            <div class="CloseIconWrapper">
+                <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line x1="27.2236" y1="27.4534" x2="9.54592" y2="9.77574" stroke-width="1.5" stroke="black"/>
+                <line x1="9.54684" y1="27.2242" x2="27.2245" y2="9.54652" stroke-width="1.5" stroke="black"/>
+                </svg>
+            </div>
+            </div>
+        </div>
+        </div>
+    <% end %>
+    </div>
+</div>

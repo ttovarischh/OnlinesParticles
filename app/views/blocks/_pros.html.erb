@@ -1,0 +1,10 @@
+<div class="SectionWrapper">
+    <div class="ProsFlexBox">
+        <% items.each do |pros| %>
+            <div class="ProsWrapper">
+                <p class="CapitalText"><%= pros["title"] %></p>
+                <p class="MainText"><%= raw pros["text"] %></p>
+            </div>
+        <% end %>
+    </div>
+</div>

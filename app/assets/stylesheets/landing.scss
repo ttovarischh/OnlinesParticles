@@ -1,0 +1,1178 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+
+// COLOR_VARS
+$o-orange: #ff4900;
+$o-black: black;
+$o-white: #ffffff;
+$o-med-grey: #6b6b6b;
+$o-light-grey: #d9d9d9;
+
+// TYPOGRAPHY_VARS
+$space: Space Grotesk;
+$inter: "Inter", sans-serif;
+$montserrat: Montserrat;
+
+// FONTSIZE_VARS
+$p92: 4.7vw;
+$p91: 4.3vw;
+$p90: 4.1vw;
+$p72: 3.9vw;
+$p60: 3vw;
+$p38: 1.8vw;
+$p37: 1.79vw;
+$p36: 1.7vw;
+$p24m: 1.4vw;
+$p24c: 1.3vw;
+$p24: 1.28vw;
+$p22: 1.21vw;
+$p20: 1.2vw;
+$p17: 1vw;
+
+//MOB_FONTSIZE_VARS
+$pm91: 7.9vw;
+$pm90: 7.5vw;
+$pm72: 7.9vw;
+$pm60: 8vw;
+$pm38: 5.6vw;
+$pm37: 4.79vw;
+$pm24: 4.28vw;
+$pm24c: 5.3vw;
+$pm22: 3.7vw;
+$pm20: 5.2vw;
+$pm17: 4vw;
+
+// FILTER_VARS
+$small-shadow: 0px 0px 20px rgba(0, 0, 0, 7%);
+$medium-shadow: 0px 0px 20px rgba(0, 0, 0, 5%);
+$big-shadow: 0px 4px 20px rgba(0, 0, 0, 7%);
+
+// BORDER_RADIUS_VARS
+$br16: 1.2rem;
+$br22: 1.3rem;
+$br25: 1.5rem;
+$br36: 2.5rem;
+
+// BREAKPOINTS
+$mob: 480px;
+
+html {
+  font-size: 1vw;
+  overflow-x: hidden;
+  @media screen and (max-width: $mob) {
+    font-size: 4.6vw;
+  }
+}
+body {
+  margin: 0;
+  @media screen and (max-width: $mob) {
+    overflow-x: hidden;
+  }
+  // background-image: url("images/i.png");
+  // background-image: url("images/4.png");
+  // background-position: 0px -216px;
+  background-color: $o-white;
+  // background-size: 100% auto;
+  p {
+    margin: 0;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+.Navbar {
+  height: 64px;
+  background-color: aquamarine;
+  @media screen and (max-width: $mob) {
+    height: 48px;
+  }
+}
+.BodyModalShown {
+  overflow: hidden;
+  overflow-y: hidden;
+  .CourseSummaryItem,
+  .FaqItem {
+    cursor: default !important;
+  }
+}
+.Modal {
+  display: none;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $o-white;
+  background-size: cover;
+  align-items: center;
+  @media screen and (max-width: $mob) {
+    align-items: flex-start;
+  }
+  .ModalContent {
+    display: flex;
+    margin: 0 3vw 0 9.4vw;
+    height: 64%;
+    width: 100%;
+    justify-content: space-between;
+    @media screen and (max-width: $mob) {
+      justify-content: unset;
+      width: auto;
+      margin: 4vw 3.55vw 0 3.55vw;
+    }
+    .ModalInfo {
+      margin-bottom: auto;
+      margin-top: auto;
+      @media screen and (max-width: $mob) {
+        width: 100%;
+      }
+    }
+    .Number {
+      font-family: $montserrat;
+      font-weight: 600;
+      font-size: $p38;
+      line-height: 1.7vw;
+      margin-bottom: 3%;
+      @media screen and (max-width: $mob) {
+        font-size: $pm17;
+        margin-bottom: 6%;
+      }
+    }
+    .Header {
+      font-family: $space;
+      font-weight: 500;
+      font-size: $p92;
+      line-height: 5.1vw;
+      letter-spacing: -0.05vw;
+      margin-left: -0.2vw;
+      margin-bottom: 5%;
+      @media screen and (max-width: $mob) {
+        font-size: $pm72;
+        line-height: 8.1vw;
+        margin-bottom: 12%;
+        max-width: 70vw !important;
+      }
+    }
+    .MainText {
+      font-weight: 400;
+      letter-spacing: 0.045vw;
+      @media screen and (max-width: $mob) {
+        width: 100%;
+        line-height: 5.8vw;
+      }
+    }
+    .CloseIconWrapper {
+      flex-shrink: 0;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.5vw;
+      height: 2.5vw;
+      background: $o-light-grey;
+      border-radius: 100%;
+      @media screen and (max-width: $mob) {
+        width: 8.5vw;
+        height: 8.5vw;
+      }
+      svg {
+        width: 1.9vw;
+        height: 1.9vw;
+        @media screen and (max-width: $mob) {
+          width: 5.5vw;
+          height: 5.5vw;
+        }
+      }
+    }
+  }
+}
+.Button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $o-black;
+  text-align: center;
+  height: 5vw;
+  width: 27vw;
+  border-radius: $br16;
+  margin-bottom: 1.6vw;
+  @media screen and (max-width: $mob) {
+    width: 94vw;
+    height: 18.6vw;
+    margin-bottom: 4.9vw;
+  }
+  > * {
+    transition: all 0.5s ease;
+  }
+  :hover {
+    opacity: 0.7;
+  }
+  span {
+    font-family: $montserrat;
+    font-size: $p38;
+    line-height: 1.85vw;
+    font-weight: 500;
+    color: $o-white;
+    @media screen and (max-width: $mob) {
+      font-size: $pm38;
+    }
+  }
+}
+.NoteTwo {
+  font-family: $montserrat;
+  font-weight: 600;
+  font-size: $p24;
+  line-height: 1.28vw;
+  text-align: center;
+  margin: 1.85vw 0 7.1vw 0;
+  @media screen and (max-width: $mob) {
+    font-size: $pm24;
+    max-width: 72vw;
+    margin: 4.6vw auto 16.1vw auto;
+    line-height: 5.28vw;
+  }
+}
+h3 {
+  font-weight: 400;
+  color: rgba(0, 0, 0, 1);
+  font-family: $space;
+  font-size: $p37;
+  font-variation-settings: "wght" 500;
+  letter-spacing: 0.6px;
+  line-height: 1.79vw;
+  margin-bottom: 2vw;
+  margin-top: 5.9vw;
+  @media screen and (max-width: $mob) {
+    font-size: $pm37;
+  }
+}
+h2 {
+  font-family: Space Grotesk;
+  font-weight: 500;
+  font-size: $p60;
+  line-height: 3.5vw;
+  width: 60vw;
+  margin-bottom: 3.2vw;
+  @media screen and (max-width: $mob) {
+    font-size: $pm60;
+    width: 100vw;
+    line-height: 8.5vw;
+    letter-spacing: -0.17vw;
+    margin-bottom: 9.2vw;
+  }
+}
+h1 {
+  font-family: $space;
+  font-weight: 500;
+  font-size: $p90;
+  line-height: 5.1vw;
+  margin-bottom: 3.4vw;
+  margin-top: 7vw;
+  @media screen and (max-width: $mob) {
+    font-size: $pm90;
+    line-height: 9.6vw;
+    margin-bottom: 9.1vw;
+  }
+}
+h5 {
+  font-family: $space;
+  font-weight: 500;
+  font-size: $p72;
+  line-height: 5.1vw;
+  letter-spacing: -0.1vw;
+  margin: 2vw 0 2.6vw 0;
+  @media screen and (max-width: $mob) {
+    font-size: $pm72;
+  }
+}
+
+.Title {
+  font-family: Space Grotesk;
+  font-weight: 500;
+  font-size: $p60;
+  line-height: 3.5vw;
+  width: 60vw;
+  margin-bottom: 3.2vw;
+  @media screen and (max-width: $mob) {
+    font-size: $pm60;
+    width: 100vw;
+    line-height: 8.5vw;
+    letter-spacing: -0.17vw;
+    margin-bottom: 9.2vw;
+  }
+}
+.ProsFlexBox {
+  display: flex;
+  flex-direction: column;
+  gap: 1.9vw;
+  margin-bottom: 10.8vw;
+  .ProsWrapper {
+    padding: 2.2vw 2.1vw 2.1vw 2.1vw;
+    display: flex;
+    align-items: baseline;
+    box-shadow: $medium-shadow;
+    gap: 7vw;
+    border-radius: $br25;
+    @media screen and (max-width: $mob) {
+      flex-direction: column;
+      background: $o-white;
+      padding: 7.8vw 7.1vw 8.1vw 7.1vw;
+      margin-bottom: 1.2vw;
+    }
+    .MainText {
+      line-height: 1.5vw;
+      width: 100%;
+      letter-spacing: -0.007vw;
+      @media screen and (max-width: $mob) {
+        line-height: 4.75vw;
+      }
+    }
+  }
+}
+.SectionWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  // opacity: 0.7;
+  @media screen and (max-width: $mob) {
+    margin: 0;
+    padding: 0px 0vw 0vw 0vw;
+  }
+  .CapitalText {
+    font-family: $montserrat;
+    font-weight: 600;
+    font-size: $p24c;
+    line-height: 1.7vw;
+    text-transform: uppercase;
+    letter-spacing: -0.01vw;
+    min-width: 25.3vw;
+    @media screen and (max-width: $mob) {
+      font-size: $pm24c;
+      line-height: 6vw;
+    }
+  }
+  .MainHeader {
+    font-family: $space;
+    font-size: $p91;
+    font-weight: 600;
+    letter-spacing: 0.2vw;
+    color: rgba(0, 0, 0, 1);
+    line-height: 5.1vw;
+    margin-bottom: 6.6vw;
+    span {
+      color: $o-white;
+    }
+    @media screen and (max-width: $mob) {
+      font-size: $pm91;
+      line-height: 9.1vw;
+      margin-bottom: 23.9vw;
+    }
+  }
+  .Header {
+    font-family: $space;
+    font-weight: 500;
+    font-size: $p90;
+    line-height: 5.1vw;
+    margin-bottom: 3.4vw;
+    @media screen and (max-width: $mob) {
+      font-size: $pm90;
+    }
+  }
+  .Breadcrumb {
+    font-family: $inter;
+    font-weight: 400;
+    font-size: $p17;
+    line-height: 1vw;
+    text-transform: uppercase;
+    color: $o-med-grey;
+    letter-spacing: -0.04vw;
+    @media screen and (max-width: $mob) {
+      font-size: $pm17;
+    }
+  }
+  .SubHeader {
+    font-family: $space;
+    font-weight: 500;
+    font-size: $p72;
+    line-height: 5.1vw;
+    letter-spacing: -0.1vw;
+    margin: 10.8vw 0 2.6vw 0;
+    @media screen and (max-width: $mob) {
+      font-size: $pm72;
+    }
+  }
+  .SubTitle {
+    font-weight: 500;
+    color: rgba(0, 0, 0, 1);
+    font-family: $montserrat;
+    font-size: $p37;
+    letter-spacing: 0.6px;
+    line-height: 1.79vw;
+    margin-bottom: 1.3vw;
+    @media screen and (max-width: $mob) {
+      font-size: $pm37;
+      margin-bottom: 7vw;
+    }
+  }
+  .MainSubTitle {
+    font-weight: 400;
+    color: rgba(0, 0, 0, 1);
+    font-family: $space;
+    font-size: $p37;
+    font-variation-settings: "wght" 500;
+    letter-spacing: 0.6px;
+    line-height: 1.79vw;
+    margin-bottom: 2vw;
+    @media screen and (max-width: $mob) {
+      font-size: $pm37;
+    }
+  }
+  .NoteOne {
+    font-family: $montserrat;
+    font-weight: 500;
+    font-size: $p24;
+    line-height: 1.28vw;
+    @media screen and (max-width: $mob) {
+      font-size: $pm24;
+      max-width: 43vw;
+      line-height: 5.28vw;
+    }
+  }
+}
+.FutureWrapper {
+  display: flex;
+  flex-direction: column;
+  //   margin-top: 5.9vw;
+  //   @media screen and (max-width: $mob) {
+  //     margin-top: 18.9vw;
+  //   }
+  .MainSubTitle {
+    @media screen and (max-width: $mob) {
+      margin-bottom: 11vw;
+    }
+  }
+  .FutureListWrapper {
+    box-shadow: $medium-shadow;
+    display: flex;
+    padding: 2.4vw 13vw 2.5vw 6.4vw;
+    justify-content: space-between;
+    border-radius: $br25;
+    @media screen and (max-width: $mob) {
+      flex-direction: column;
+      background: $o-white;
+      padding: 6.3vw 13vw 2.5vw 6.8vw;
+    }
+    ul {
+      padding: 0;
+      display: inline-block;
+      max-width: 16.2vw;
+      @media screen and (max-width: $mob) {
+        max-width: 70.2vw;
+        margin: 0;
+      }
+      li {
+        font-family: $montserrat;
+        font-weight: 400;
+        font-size: $p24;
+        line-height: 1.8vw;
+        list-style: none;
+        text-indent: -1.1vw;
+        padding-left: 1.1vw;
+        margin-bottom: 0.2vw;
+        @media screen and (max-width: $mob) {
+          font-size: $pm24;
+          line-height: 7vw;
+          margin-bottom: 1.6vw;
+          text-indent: -4.1vw;
+          padding-left: 4.1vw;
+        }
+      }
+      li:before {
+        content: "·";
+        font-size: 2vw;
+        vertical-align: text-top;
+        line-height: 1.8vw;
+        margin-right: 0.7vw;
+        @media screen and (max-width: $mob) {
+          font-size: 6vw;
+          line-height: 5.8vw;
+          margin-right: 2.7vw;
+        }
+      }
+    }
+  }
+}
+
+.MainText {
+  font-family: $montserrat;
+  font-weight: 500;
+  font-size: $p24;
+  width: 40vw;
+  line-height: 1.8vw;
+  letter-spacing: -0.02vw;
+  @media screen and (max-width: $mob) {
+    font-size: $pm24;
+  }
+}
+.MainTextWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5vw;
+  margin-bottom: 9vw;
+  .MainText {
+    @media screen and (max-width: $mob) {
+      width: 92vw;
+      line-height: 5.9vw;
+    }
+  }
+}
+.TuitionFlexBox {
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+  margin-bottom: 9.5vw;
+  @media screen and (max-width: $mob) {
+    flex-direction: column;
+  }
+  .SubTitle {
+    font-weight: 600;
+    min-width: 29vw;
+    width: 29vw;
+    line-height: 2.1vw;
+    @media screen and (max-width: $mob) {
+      width: 88vw;
+      line-height: 7.1vw;
+      font-size: 5.79vw;
+      letter-spacing: 0.3px;
+    }
+  }
+  .TuitionInfoWrapper {
+    background: $o-white;
+    display: flex;
+    width: 44.5vw;
+    padding: 2vw 2.8vw 2.4vw 3vw;
+    border-radius: $br25;
+    box-shadow: $small-shadow;
+    justify-content: space-between;
+    @media screen and (max-width: $mob) {
+      width: auto;
+      flex-direction: column;
+      padding: 7.8vw 7.1vw 8.1vw 7.1vw;
+      gap: 2vw;
+    }
+    p {
+      font-family: $montserrat;
+      font-weight: 500;
+      font-size: $p24;
+      width: 40vw;
+      line-height: 1.8vw;
+      letter-spacing: -0.02vw;
+      width: auto;
+      max-width: 21.5vw;
+      line-height: 1.65vw;
+      @media screen and (max-width: $mob) {
+        max-width: 100vw;
+        line-height: 5.65vw;
+        font-size: $pm24;
+      }
+    }
+  }
+}
+
+.DisciplinesGrid {
+  display: grid;
+  margin-top: 5vw;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 1vw;
+  grid-row-gap: 1.5vw;
+  margin-bottom: 5vw;
+  @media screen and (max-width: $mob) {
+    grid-template-columns: 1fr;
+    margin-top: 9vw;
+  }
+  .Discipline {
+    position: relative;
+    border-radius: $br36;
+    padding: 3.3vw 3.3vw 4.4vw 3vw;
+    background: $o-orange;
+    min-width: 0;
+    height: 12.6vw;
+    display: flex;
+    justify-content: space-between;
+    .SubTitle {
+      @media screen and (max-width: $mob) {
+        line-height: 5.79vw;
+        margin-bottom: 5vw;
+      }
+    }
+    @media screen and (max-width: $mob) {
+      border-radius: 0.9rem;
+      padding: 8.3vw 3.3vw 4.4vw 7vw;
+      height: 43.6vw;
+    }
+    // &:nth-of-type(3) {
+    //   .MainText {
+    //     margin-bottom: 2.8vw;
+    //     @media screen and (max-width: $mob) {
+    //       margin-bottom: 5vw;
+    //     }
+    //   }
+    // }
+  }
+  .MainText {
+    width: 28vw;
+    line-height: 1.6vw;
+    @media screen and (max-width: $mob) {
+      width: 79vw !important;
+    }
+  }
+  .FlexBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    @media screen and (max-width: $mob) {
+      height: 76%;
+    }
+  }
+  .NumberWrapper {
+    width: 4.4vw;
+    height: 4.4vw;
+    background: $o-white;
+    border-radius: 100%;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media screen and (max-width: $mob) {
+      position: absolute;
+      right: 2vw;
+      top: 4vw;
+      width: 11.4vw;
+      height: 11.4vw;
+    }
+    .Number {
+      font-family: $inter;
+      font-weight: 500;
+      font-size: $p36;
+      line-height: 1.7vw;
+      @media screen and (max-width: $mob) {
+        font-size: 5.7vw;
+      }
+    }
+  }
+}
+.FaqFlexBox {
+  display: flex;
+  flex-direction: column;
+  gap: 2.16vw;
+  margin-bottom: 7.5vw;
+  @media screen and (max-width: $mob) {
+    gap: 6.7vw;
+  }
+  .FaqItem {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .Modal {
+      .Header {
+        max-width: 63vw;
+      }
+    }
+    .SubTitle {
+      font-weight: 600;
+      line-height: 2.1vw;
+      margin-bottom: 0;
+      letter-spacing: -0.07vw;
+      @media screen and (max-width: $mob) {
+        line-height: 6.1vw;
+        max-width: 80vw;
+      }
+    }
+  }
+  .PlusIconWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5vw;
+    height: 2.5vw;
+    background: $o-light-grey;
+    border-radius: 100%;
+    @media screen and (max-width: $mob) {
+      width: 8.5vw;
+      height: 8.5vw;
+    }
+    > * {
+      transition: all 0.5s ease;
+    }
+    :hover {
+      opacity: 0.5;
+    }
+    svg {
+      width: 1.5vw;
+      height: 1.5vw;
+      :hover {
+        opacity: 1;
+      }
+      @media screen and (max-width: $mob) {
+        width: 5.5vw;
+        height: 5.5vw;
+      }
+    }
+  }
+}
+.CourseSummaryWrapperr {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 1.7vw;
+  grid-row-gap: 1.7vw;
+  margin-bottom: 12vw;
+  @media screen and (max-width: $mob) {
+    grid-template-columns: 1fr;
+  }
+  .CourseSummaryItem {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.7vw 2.4vw 1.7vw 2.4vw;
+    align-items: center;
+    box-shadow: $small-shadow;
+    height: 10.8vw;
+    border-radius: 1.5rem;
+    @media screen and (max-width: $mob) {
+      padding: 7.8vw 2.4vw 7.8vw 4.4vw;
+      height: 31.8vw;
+    }
+    .UpperRow {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2vw;
+      @media screen and (max-width: $mob) {
+        gap: 6.2vw;
+      }
+    }
+    .BreadcrumbTwo {
+      font-family: $inter;
+      font-weight: 400;
+      font-size: $p20;
+      line-height: 1vw;
+      color: $o-med-grey;
+      letter-spacing: -0.04vw;
+      @media screen and (max-width: $mob) {
+        font-size: 4vw;
+      }
+    }
+    .FlexBox {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: space-between;
+      .SubTitle {
+        font-weight: 600;
+      }
+    }
+    .SubTitle {
+      margin-bottom: 0;
+      @media screen and (max-width: $mob) {
+        font-size: 5.8vw;
+        line-height: 5.79vw;
+      }
+    }
+    .PlusIconWrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 3.5vw;
+      height: 3.5vw;
+      background: $o-light-grey;
+      border-radius: 100%;
+      transition: 0.5s ease all;
+      :hover {
+        opacity: 0.5;
+      }
+      svg {
+        width: 2.5vw;
+        height: 2.5vw;
+        transition: 0.5s ease all;
+        :hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+.CourseSummaryWrapper {
+  border-radius: $br25;
+  box-shadow: $big-shadow;
+  .CourseSummaryItem {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    padding: 2.4vw 2.4vw 2vw 2.4vw;
+    border-bottom: 1px solid $o-light-grey;
+    align-items: center;
+    &:last-of-type {
+      padding-bottom: 2.4vw;
+      border-bottom: none;
+    }
+    .FlexBox {
+      display: flex;
+      flex-direction: column;
+      gap: 1.3vw;
+      .SubTitle {
+        font-weight: 600;
+      }
+    }
+    .SubTitle {
+      margin-bottom: 0;
+    }
+    .PlusIconWrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 3.5vw;
+      height: 3.5vw;
+      background: $o-light-grey;
+      border-radius: 100%;
+      transition: 0.5s ease all;
+      :hover {
+        opacity: 0.5;
+      }
+      svg {
+        width: 2.5vw;
+        height: 2.5vw;
+        transition: 0.5s ease all;
+        :hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+.Illustration {
+  position: absolute;
+  right: -2vw;
+  background: url("images/IllustrationOne.svg");
+  background-size: contain;
+  width: 37.5vw;
+  height: 20vw;
+  background-repeat: no-repeat;
+  top: 3vw;
+  @media screen and (max-width: $mob) {
+    right: 0vw;
+    width: 98.5vw;
+    height: 50vw;
+    top: 28.1vw;
+  }
+}
+.IllustrationTwo {
+  position: absolute;
+  top: -9.5vw;
+  right: 0;
+  background: url("images/IllustrationTwo.svg");
+  background-size: contain;
+  width: 33.2vw;
+  height: 18.7vw;
+  background-repeat: no-repeat;
+  background-position: 0 -0.6vw;
+  @media screen and (max-width: $mob) {
+    top: 28vw;
+    right: 2vw;
+    width: 94.2vw;
+    height: 53.7vw;
+  }
+}
+.IllustrationThree {
+  position: absolute;
+  top: -11.5vw;
+  right: 0;
+  background: url("images/IllustrationThree.svg");
+  background-size: contain;
+  width: 25.9vw;
+  background-repeat: no-repeat;
+  height: 32.5vw;
+}
+.IllustrationFour {
+  position: absolute;
+  top: 0;
+  right: 1vw;
+  background: url("images/IllustratonFour.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 27.5vw;
+  height: 17.9vw;
+}
+.IllustrationFive {
+  position: absolute;
+  top: 13vw;
+  right: 35.5vw;
+  background: url("images/IllustrationFive.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 21.5vw;
+  height: 17.9vw;
+}
+.TxtImgFlexBox {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  p {
+    letter-spacing: -0.008vw;
+    font-family: $montserrat;
+    font-weight: 500;
+    font-size: $p24;
+    width: 40vw;
+    line-height: 1.8vw;
+    letter-spacing: -0.02vw;
+    @media screen and (max-width: $mob) {
+      font-size: $pm24;
+    }
+  }
+}
+.SectionWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-left: 7.55vw;
+  margin-right: 7.55vw;
+}
+#text {
+  padding-left: 0.6vw;
+  @media screen and (max-width: $mob) {
+    padding-left: 3.55vw;
+    padding-right: 3.55vw;
+  }
+}
+.ActivitiesGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 1.7vw;
+  grid-row-gap: 1.7vw;
+  @media screen and (max-width: $mob) {
+    grid-template-columns: 1fr;
+  }
+}
+.ActivityWrapper {
+  background: $o-orange;
+  display: flex;
+  min-width: 0;
+  text-align: center;
+  height: 7vw;
+  border-radius: $br25;
+  align-items: center;
+  justify-content: center;
+  @media screen and (max-width: $mob) {
+    height: 19.7vw;
+    border-radius: 1rem;
+  }
+}
+.Activity {
+  min-width: 0;
+  font-family: $montserrat;
+  font-weight: 400;
+  font-size: $p22;
+  width: 40vw;
+  line-height: 1.5vw;
+  color: $o-white;
+  max-width: 22vw;
+  @media screen and (max-width: $mob) {
+    font-size: $pm22;
+    width: 63vw;
+    max-width: 96vw;
+    line-height: 4.5vw;
+  }
+}
+#big {
+  border-radius: $br25;
+  padding: 2.3vw 2.6vw;
+  .Content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.WithBg {
+  margin-top: 35px;
+  background-size: cover;
+  box-shadow: $medium-shadow;
+}
+.NoBg {
+  background: $o-orange;
+  .ContentWrapper {
+    padding: 6vw 0 4.5vw 0;
+    @media screen and (max-width: $mob) {
+      padding: 61vw 0 62.5vw 0;
+    }
+    .Title {
+      margin-bottom: 5vw;
+      @media screen and (max-width: $mob) {
+        margin-bottom: 23.2vw;
+      }
+      span {
+        color: $o-white;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+.ContentWrapper {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 7.9vw 0 6.4vw 0;
+  justify-content: center;
+  @media screen and (max-width: $mob) {
+    padding: 77.6vw 0 26.4vw 0;
+  }
+}
+@keyframes labelAnimation {
+  0% {
+    transform: translate(0px, 0px) rotate(0deg) scale(1);
+    opacity: 1;
+    animation-timing-function: ease-in-out;
+  }
+  40% {
+    transform: translate(0px, 0px) rotate(5deg) scale(1);
+    opacity: 1;
+    animation-timing-function: ease-in-out;
+  }
+  80% {
+    transform: translate(0px, 0px) rotate(-5deg) scale(1);
+    opacity: 1;
+    animation-timing-function: ease-in-out;
+  }
+  100% {
+    transform: translate(0px, 0px) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+}
+.Label {
+  animation: labelAnimation 0.5s 0s infinite normal none;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-color: $o-white;
+  width: 18.3vw;
+  height: 4vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: $br22;
+  font-weight: 600;
+  @media screen and (max-width: $mob) {
+    top: 7.5vw;
+    left: 3vw;
+    width: 67.7vw;
+    height: 16vw;
+  }
+  span {
+    font-family: $inter;
+    color: $o-black;
+    font-size: $p20;
+    font-weight: 600;
+    @media screen and (max-width: $mob) {
+      font-size: $pm20;
+    }
+  }
+}
+#showmob {
+  display: none;
+  @media screen and (max-width: $mob) {
+    display: block;
+  }
+}
+#hidemob {
+  display: block;
+  @media screen and (max-width: $mob) {
+    display: none;
+  }
+}
+.First {
+  margin-bottom: 10.6vw;
+  .Title {
+    @media screen and (max-width: $mob) {
+      margin-bottom: 69.4vw;
+    }
+  }
+  @media screen and (max-width: $mob) {
+    margin-bottom: 15.5vw;
+  }
+}
+.Second {
+  margin-bottom: 7vw;
+  @media screen and (max-width: $mob) {
+    margin-bottom: 16.4vw;
+  }
+}
+.Third {
+  margin-bottom: 1.6vw;
+  @media screen and (max-width: $mob) {
+    margin-bottom: 5.6vw;
+  }
+  .Header {
+    @media screen and (max-width: $mob) {
+      line-height: 9.6vw;
+      margin-bottom: 9.1vw;
+    }
+  }
+}
+.Fourth {
+  margin-bottom: 1.5vw;
+  .SubHeader {
+    @media screen and (max-width: $mob) {
+      margin: 10.8vw 0 73.6vw 0;
+    }
+  }
+}
+.Fifth {
+  margin-bottom: 5vw;
+  @media screen and (max-width: $mob) {
+    margin-bottom: 16vw;
+  }
+  .Header {
+    margin-top: 12vw;
+    margin-bottom: 3.9vw;
+    @media screen and (max-width: $mob) {
+      margin-bottom: 10.9vw;
+    }
+  }
+  .MainText {
+    :first-of-type {
+      width: 86vw;
+    }
+    letter-spacing: -0.039vw;
+    @media screen and (max-width: $mob) {
+      width: 86vw;
+      line-height: 5.8vw;
+    }
+  }
+}
+.Sixth {
+  .Header {
+    margin-top: 1.2vw;
+    margin-bottom: 4.4vw;
+    text-transform: uppercase;
+    @media screen and (max-width: $mob) {
+      margin-bottom: 5.4vw;
+    }
+  }
+}
+.Seventh {
+  margin-bottom: 7.5vw;
+  @media screen and (max-width: $mob) {
+    margin-bottom: 15.5vw;
+  }
+  .SubHeader {
+    margin-top: 0;
+    margin-bottom: 3.3vw;
+    @media screen and (max-width: $mob) {
+      margin-bottom: 11.3vw;
+    }
+  }
+}
+.TitleWrapper {
+  position: relative;
+}

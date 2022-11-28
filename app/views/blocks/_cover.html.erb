@@ -1,0 +1,18 @@
+<div class="SectionWrapper <%= className %>" id="big" style="<%= !bg_image.blank? ? "background: url(" + +bg_image + ");" : "background: #ff4900" %>">
+    <div class="ContentWrapper">
+        <% if local_assigns.has_key? :label %>
+            <div class="Label"><span><%= label %></span></div>
+        <% end %>
+        <div class="Content">
+            <% if local_assigns.has_key? :sub_title %>
+                <p class="SubTitle"> <%= sub_title %> </p>
+                <p class="MainHeader"> <%= raw main_header %> </p>
+            <% else %>
+                <p class="Title"><%= raw main_header %></p>
+            <% end %>
+            <a href="<%= button['link'] %>"><div class="Button"><span><%= button['title'] %></span></div></a>
+            <p class="NoteOne"> <%= note_one %> </p>
+        </div>
+    </div>
+</div>
+<p class="NoteTwo"><%= note_two %></p>

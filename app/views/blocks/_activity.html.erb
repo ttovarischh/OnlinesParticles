@@ -1,0 +1,9 @@
+<div class="SectionWrapper">
+    <div class="ActivitiesGrid">
+        <% activity_items.each do |listitem| %>
+            <div class="ActivityWrapper">
+                <p class="Activity"><%= listitem["text"] %></p>
+            </div>
+        <% end %>
+    </div>
+</div>
