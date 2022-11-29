@@ -1,8 +1,13 @@
 <div class="SectionWrapper">
     <div class="TitleWrapper">
-        <<%= tag %>><%= text %></<%= tag %>> 
+        <% if local_assigns.has_key? :mob %>
+            <<%= tag %> id='hidemob' ><%= text %></<%= tag %>>
+            <<%= tag %> id='showmob'><%= mob %></<%= tag %>> 
+        <% else %>
+            <<%= tag %>><%= text %></<%= tag %>>
+        <% end %>
         <% if local_assigns.has_key? :image %>
-        <div class="<%= image['className'] %>" style="background-image: url(<%= image['bg_image'] %>);"></div>
+            <div class="<%= image['className'] %>" style="background-image: url(<%= image['bg_image'] %>);"></div>
         <% end %>
         <% if local_assigns.has_key? :lead %>
             <p class="MainText"><%= lead %></p>

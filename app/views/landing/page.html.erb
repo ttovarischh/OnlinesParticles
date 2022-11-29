@@ -1,7 +1,7 @@
 <%= render partial: 'blocks/cover', locals: {className: "WithBg", label: "2-month trial period", sub_title: "Design from scratch", main_header: "Communication design<br><span>basic level</span>", note_one: "The course starts in February, 2023", note_two: "Basics of design taught by practitioners, industry experts", button: {"title" => "Start learning", "link" => "https://onlinesdesign.com/join"}, bg_image: "/assets/bg.jpg"} %>
 <%= render partial: 'blocks/title', locals: {tag: "h2", text: "Who is a communication designer"} %>
 <%= render partial: 'blocks/text_with_image', locals: {text: "<p>Communication designers are responsible for all visual communications of a product or a brand.</p><p>They solve its problems through design. Create an identity which is appropriate to the brand’s or product’s objectives and audience. Then distribute it by all means of customer communication: via packaging, website, and corporate products. On merchandise and souvenirs.</p><p>Anyone can become a communication designer — with practice and advice. We will start from the visual identity, then gradually proceed to more complicated tasks: digital, graphic, and typographic.</p>", image: "/assets/IllustrationOne.svg"} %>
-<%= render partial: 'blocks/title', locals: {tag: "h2", text: "During this course you will"} %>
+<%= render partial: 'blocks/title', locals: {tag: "h2", text: "During this course you will", mob: "You will"} %>
 <%= render partial: 'blocks/activity', locals: {activity_items: [
         {"text" => "create your brand’s visual identity"},
         {"text" => "develop and animate graphic and typographic posters"},
@@ -45,4 +45,4 @@
     {"question" => "What if I can't draw and am not creative enough?", "answer" => "ONLINES courses do not have entry requirements. Programme tutors will help you to learn all basic creative skills, get to know the genres of communication design."},
     {"question" => "Will I be able to find a job after this course?", "answer" => "Communication design is a cross-border industry. The knowledge and skills you acquire, as well as your portfolio of completed projects, will help you to compete for clients anywhere in the world."}
 ]} %>
-<%= render partial: 'blocks/cover', locals: {className: "NoBg", main_header: "Join the <span>onlines</span>", button: {"title" => "Become a designer", "link" => "https://onlinesdesign.com/join"}, note_one: "Starts in February, 2023", bg_image: "", note_two: ""} %>
+<%= render partial: 'blocks/cover', locals: {className: "NoBg", main_header: "Join the <span>onlines</span>", button: {"title" => "Become a designer", "link" => "https://onlinesdesign.com/join"}, note_one: "Starts in February, 2023", bg_image: ""} %>

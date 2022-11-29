@@ -117,7 +117,7 @@ body {
     @media screen and (max-width: $mob) {
       justify-content: unset;
       width: auto;
-      margin: 4vw 3.55vw 0 3.55vw;
+      margin: 48px 3.55vw 0 3.55vw;
     }
     .ModalInfo {
       margin-bottom: auto;
@@ -243,6 +243,7 @@ h3 {
   margin-top: 5.9vw;
   @media screen and (max-width: $mob) {
     font-size: $pm37;
+    margin-bottom: 11vw;
   }
 }
 h2 {
@@ -282,6 +283,7 @@ h5 {
   margin: 2vw 0 2.6vw 0;
   @media screen and (max-width: $mob) {
     font-size: $pm72;
+    margin-bottom: 13vw;
   }
 }
 
@@ -333,9 +335,14 @@ h5 {
   display: flex;
   flex-direction: column;
   // opacity: 0.7;
+  margin-left: 7.55vw;
+  margin-right: 7.55vw;
   @media screen and (max-width: $mob) {
-    margin: 0;
-    padding: 0px 0vw 0vw 0vw;
+    padding: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 3.55vw;
+    padding-right: 3.55vw;
   }
   .CapitalText {
     font-family: $montserrat;
@@ -375,6 +382,8 @@ h5 {
     margin-bottom: 3.4vw;
     @media screen and (max-width: $mob) {
       font-size: $pm90;
+      margin-top: 16vw;
+        margin-bottom: 5vw;
     }
   }
   .Breadcrumb {
@@ -442,9 +451,9 @@ h5 {
   display: flex;
   flex-direction: column;
   //   margin-top: 5.9vw;
-  //   @media screen and (max-width: $mob) {
-  //     margin-top: 18.9vw;
-  //   }
+    @media screen and (max-width: $mob) {
+        margin-bottom: 16.4vw;
+    }
   .MainSubTitle {
     @media screen and (max-width: $mob) {
       margin-bottom: 11vw;
@@ -598,6 +607,12 @@ h5 {
     height: 12.6vw;
     display: flex;
     justify-content: space-between;
+    .MainText {
+        @media screen and (max-width: $mob) {
+            line-height: 5.8vw;
+            width: 79vw !important;
+          }
+    }
     .SubTitle {
       @media screen and (max-width: $mob) {
         line-height: 5.79vw;
@@ -607,7 +622,7 @@ h5 {
     @media screen and (max-width: $mob) {
       border-radius: 0.9rem;
       padding: 8.3vw 3.3vw 4.4vw 7vw;
-      height: 43.6vw;
+      height: 49vw;
     }
     // &:nth-of-type(3) {
     //   .MainText {
@@ -645,7 +660,7 @@ h5 {
     align-items: center;
     @media screen and (max-width: $mob) {
       position: absolute;
-      right: 2vw;
+      right: 3vw;
       top: 4vw;
       width: 11.4vw;
       height: 11.4vw;
@@ -729,6 +744,7 @@ h5 {
   margin-bottom: 12vw;
   @media screen and (max-width: $mob) {
     grid-template-columns: 1fr;
+    margin-top: 59vw;
   }
   .CourseSummaryItem {
     cursor: pointer;
@@ -859,10 +875,10 @@ h5 {
   background-repeat: no-repeat;
   top: 3vw;
   @media screen and (max-width: $mob) {
-    right: 0vw;
+    right: -3vw;
     width: 98.5vw;
     height: 50vw;
-    top: 28.1vw;
+    top: 0vw;
   }
 }
 .IllustrationTwo {
@@ -876,8 +892,8 @@ h5 {
   background-repeat: no-repeat;
   background-position: 0 -0.6vw;
   @media screen and (max-width: $mob) {
-    top: 28vw;
-    right: 2vw;
+    top: 17vw;
+    right: -1.5vw;
     width: 94.2vw;
     height: 53.7vw;
   }
@@ -891,6 +907,9 @@ h5 {
   width: 25.9vw;
   background-repeat: no-repeat;
   height: 32.5vw;
+  @media screen and (max-width: $mob) {
+    display: none;
+  }
 }
 .IllustrationFour {
   position: absolute;
@@ -916,6 +935,11 @@ h5 {
   position: relative;
   display: flex;
   justify-content: space-between;
+  .MainTextWrapper {
+    @media screen and (max-width: $mob) {
+        margin-top: 57vw;
+    }
+  }
   p {
     letter-spacing: -0.008vw;
     font-family: $montserrat;
@@ -926,15 +950,10 @@ h5 {
     letter-spacing: -0.02vw;
     @media screen and (max-width: $mob) {
       font-size: $pm24;
+      width: 92vw;
+      line-height: 5.9vw;
     }
   }
-}
-.SectionWrapper {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  margin-left: 7.55vw;
-  margin-right: 7.55vw;
 }
 #text {
   padding-left: 0.6vw;
@@ -950,6 +969,7 @@ h5 {
   grid-row-gap: 1.7vw;
   @media screen and (max-width: $mob) {
     grid-template-columns: 1fr;
+    margin-bottom: 18.9vw;
   }
 }
 .ActivityWrapper {
@@ -996,9 +1016,17 @@ h5 {
   margin-top: 35px;
   background-size: cover;
   box-shadow: $medium-shadow;
+  @media screen and (max-width: $mob) {
+    margin-top: 0;
+  }
 }
 .NoBg {
   background: $o-orange;
+  margin-bottom: 5.4vw;
+  @media screen and (max-width: $mob) {
+    margin-top: 10vw;
+    margin-bottom: 0;
+  }
   .ContentWrapper {
     padding: 6vw 0 4.5vw 0;
     @media screen and (max-width: $mob) {
@@ -1175,4 +1203,10 @@ h5 {
 }
 .TitleWrapper {
   position: relative;
+  .MainText {
+    @media screen and (max-width: $mob) {
+        width: 86vw;
+        line-height: 5.8vw;
+      }
+  }
 }

@@ -15,4 +15,6 @@
         </div>
     </div>
 </div>
-<p class="NoteTwo"><%= note_two %></p>
+<% if local_assigns.has_key? :note_two %>
+    <p class="NoteTwo"><%= note_two %></p>
+<% end %>
